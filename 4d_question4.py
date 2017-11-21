@@ -27,6 +27,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i+1,j+1]=tuple(x+(highest2-averageoffive) for x in pixellist[i+1,j+1])
 			elif sum(pixellist[i+1,j+1])/3==highest1:
 				pixelnew[i+1,j+1]=tuple(x+(highest1-averageoffive) for x in pixellist[i+1,j+1])
+			else:
+				pixelnew[i+1,j+1] = pixellist[i+1,j+1]
 			
 			if sum(pixellist[i+1,j])/3==lowest1:#2
 				pixelnew[i+1,j]=tuple(x+(averageoffive-lowest1) for x in pixellist[i+1,j])
@@ -36,6 +38,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i+1,j]=tuple(x+(highest2-averageoffive) for x in pixellist[i+1,j])
 			elif sum(pixellist[i+1,j])/3==highest1:
 				pixelnew[i+1,j]=tuple(x+(highest1-averageoffive) for x in pixellist[i+1,j])
+			else:
+				pixelnew[i+1,j] = pixellist[i+1,j]
 				
 			if sum(pixellist[i,j+1])/3==lowest1:#3
 				pixelnew[i,j+1]=tuple(x+(averageoffive-lowest1) for x in pixellist[i,j+1])
@@ -45,6 +49,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i,j+1]=tuple(x+(highest2-averageoffive) for x in pixellist[i,j+1])
 			elif sum(pixellist[i,j+1])/3==highest1:
 				pixelnew[i,j+1]=tuple(x+(highest1-averageoffive) for x in pixellist[i,j+1])
+			else:
+				pixelnew[i,j+1] = pixellist[i,j+1]
 				
 			if sum(pixellist[i,j])/3==lowest1:#4
 				pixelnew[i,j]=tuple(x+(averageoffive-lowest1) for x in pixellist[i,j])
@@ -54,6 +60,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i,j]=tuple(x+(highest2-averageoffive) for x in pixellist[i,j])
 			elif sum(pixellist[i,j])/3==highest1:
 				pixelnew[i,j]=tuple(x+(highest1-averageoffive) for x in pixellist[i,j])
+			else:
+				pixelnew[i,j] = pixellist[i,j]
 				
 			if sum(pixellist[i+2,j])/3==lowest1:#5
 				pixelnew[i+2,j]=tuple(x+(averageoffive-lowest1) for x in pixellist[i+2,j])
@@ -63,6 +71,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i+2,j]=tuple(x+(highest2-averageoffive) for x in pixellist[i+2,j])
 			elif sum(pixellist[i+2,j])/3==highest1:
 				pixelnew[i+2,j]=tuple(x+(highest1-averageoffive) for x in pixellist[i+2,j])
+			else:
+				pixelnew[i+2,j] = pixellist[i+2,j]
 				
 			if sum(pixellist[i+1,j+2])/3==lowest1:#6
 				pixelnew[i+1,j+2]=tuple(x+(averageoffive-lowest1) for x in pixellist[i+1,j+2])
@@ -72,6 +82,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i+1,j+2]=tuple(x+(highest2-averageoffive) for x in pixellist[i+1,j+2])
 			elif sum(pixellist[i+1,j+2])/3==highest1:
 				pixelnew[i+1,j+2]=tuple(x+(highest1-averageoffive) for x in pixellist[i+1,j+2])
+			else:
+				pixelnew[i+1,j+2] = pixellist[i+1,j+2]
 				
 			if sum(pixellist[i+2,j+2])/3==lowest1:#7
 				pixelnew[i+2,j+2]=tuple(x+(averageoffive-lowest1) for x in pixellist[i+2,j+2])
@@ -81,6 +93,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i+2,j+2]=tuple(x+(highest2-averageoffive) for x in pixellist[i+2,j+2])
 			elif sum(pixellist[i+2,j+2])/3==highest1:
 				pixelnew[i+2,j+2]=tuple(x+(highest1-averageoffive) for x in pixellist[i+2,j+2])
+			else:
+				pixelnew[i+2,j+2] = pixellist[i+2,j+2]
 				
 				
 			if sum(pixellist[i+2,j+1])/3==lowest1:#8
@@ -91,6 +105,8 @@ for i in range(img.size[0]-2):
 				pixelnew[i+2,j+1]=tuple(x+(highest2-averageoffive) for x in pixellist[i+2,j+1])
 			elif sum(pixellist[i+2,j+1])/3==highest1:
 				pixelnew[i+2,j+1]=tuple(x+(highest1-averageoffive) for x in pixellist[i+2,j+1])
+			else:
+				pixelnew[i+2,j+1] = pixellist[i+2,j+1]
 				
 			if sum(pixellist[i,j+2])/3==lowest1:#9
 				pixelnew[i,j+2]=tuple(x+(averageoffive-lowest1) for x in pixellist[i,j+2])
@@ -100,8 +116,12 @@ for i in range(img.size[0]-2):
 				pixelnew[i,j+2]=tuple(x+(highest2-averageoffive) for x in pixellist[i,j+2])
 			elif sum(pixellist[i,j+2])/3==highest1:
 				pixelnew[i,j+2]=tuple(x+(highest1-averageoffive) for x in pixellist[i,j+2])
-        else:
-            pixelnew[i,j] = pixellist[i,j]
+			else:
+				pixelnew[i,j+2] = pixellist[i,j+2]
+			
+			
+        else: #in retrospect, the above should be a function
+            pixelnew[i+1,j+1] = pixellist[i+1,j+1]
 
 
 

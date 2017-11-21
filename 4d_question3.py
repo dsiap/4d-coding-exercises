@@ -17,7 +17,7 @@ for i in range(img.size[0]-2):
 				difference=abs((sum(pixellist[i+2,j+1])+sum(pixellist[i,j+1])+sum(pixellist[i+1,j+2])+sum(pixellist[i+1,j]))/12-sum(pixellist[i+1,j+1])/3)
 				pixelnew[i+1,j+1]=tuple(x+difference for x in pixellist[i+1,j+1])
         else:
-            pixelnew[i,j] = pixellist[i,j]
+            pixelnew[i+1,j+1] = pixellist[i+1,j+1]
 
 
 

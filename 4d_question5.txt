@@ -1,0 +1,5 @@
+In answer to question 2-3:Question 2-3
+
+Explain pros and cons of the two programs in Question 2-1 and Question 2-2.
+
+The method in section 2-1 has the advantage of being simpler and potentially preserving more features present in the initial picture.  This reduces the chance of accidentally eliminating something that's not noise.  The method in section 2-2 is more complex, but results in a smoother image, resulting in a greater reduction in noise from the initial image.  
